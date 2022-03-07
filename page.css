@@ -19,9 +19,11 @@
 .header {
     width: 100%;
     grid-area: header;
-    display: grid;
-    grid-auto-flow: row;
+    justify-content: space-between;
+    display: flex;
     padding-bottom: 10px;
+    flex-direction: row;
+    flex-flow: nowrap;
 }
 .content-1 {
     grid-area: content-1;
@@ -67,7 +69,7 @@ a {
     text-decoration: none;
     color: black;
 }
-.nav-area li a:hover{
+a:hover{
     color: dodgerblue;
     text-decoration: none;
 }
@@ -79,26 +81,29 @@ li:not(.logo) {
 h1 {
     padding: 20px;
 }
-.nav-area:not(.logo){
-    justify-self: flex-start ;
-    display: flex;
-    list-style: none;
-    align-content: center;
-    justify-content: flex-end;
-    padding: 10px;
-}
 .logo{
-    display: inline-flex;
+    margin-top: 20px;
     height: 35px;
     padding-left: 20px;
-    justify-self: flex-start;
+    margin-right: auto;
 }
 .icons {
     height: 25px;
 }
 .inp {
+    justify-self: center;
+    align-self: center;
     font-family:Arial, FontAwesome;
+    margin-top: 30px;
     border-radius: 5px;
-    size: 20px;
+    size: 50px;
     border-color: transparent;
+}
+.nav-area{
+    margin-top: 10px;
+    display: inline-flex;
+    list-style: none;
+    margin-right: auto;
+    align-content: flex-start;
+    justify-self: flex-end;
 }
